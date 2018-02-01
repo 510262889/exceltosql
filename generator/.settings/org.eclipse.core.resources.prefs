@@ -1,0 +1,15 @@
+eclipse.preferences.version=1
+encoding//src/genertor/FieldType.java=UTF-8
+encoding//src/genertor/MySqlScriptGenerater.java=UTF-8
+encoding//src/genertor/OracleScriptGenerater.java=UTF-8
+encoding//src/genertor/SqlScriptGenerator.java=UTF-8
+encoding//src/genertor/config/FieldConfig.java=UTF-8
+encoding//src/genertor/config/SheetConfig.java=UTF-8
+encoding//src/genertor/config/TypeMapConfig.java=UTF-8
+encoding//src/main/java/datagenerator/InterfaceDataGenerator.java=UTF-8
+encoding//src/main/java/datagenerator/Main.java=UTF-8
+encoding//src/main/java/datagenerator/SystemDataGenerator.java=UTF-8
+encoding//src/main/java/datagenerator/SystemRelDataGenerator.java=UTF-8
+encoding//src/util/Loader.java=UTF-8
+encoding//src/util/UUIDUtil.java=UTF-8
+encoding//src/util/XmlUtil.java=UTF-8

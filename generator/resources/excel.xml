@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!--基于XML生成SQL脚本的配置文件-->
+<configuration>
+    <!--用于生成脚本的Excel文件，注意只支持2007格式。-->
+    <src>doc/数据结构.xlsx</src>
+    <!--设置脚本生成目录-->
+    <out>scripts/</out>
+    <!--
+        自定义数据类型与数据库类型的映射关系
+        sheet: 定义有映射关系的sheet
+        row: 表示类型映射关系所开始的行。与Excel的行数字一致即可。
+    -->
+    <map sheet="格式说明" row="5">
+        <!--自定义类型列-->
+        <type>C</type>
+        <!--MYSQL类型列-->
+        <mysqlType>D</mysqlType>
+        <!--Oracle类型列-->
+        <oracleType>E</oracleType>
+        <!--类型名称-->
+        <name>F</name>
+        <!--类型备注-->
+        <remark>G</remark>
+    </map>
+    <!--
+        默认字段定义
+        sheet: 定义有映射关系的sheet
+        row: 表示类型映射关系所开始的行。与Excel的行数字一致即可。
+    -->
+    <defaultFields sheet="_默认字段模板_" row="3">
+        <name>B</name>
+        <comment>C</comment>
+        <type>D</type>
+        <precision>E</precision>
+        <default>F</default>
+        <primiaryKey>G</primiaryKey>
+        <autoIncrement>H</autoIncrement>
+        <nullable>I</nullable>
+        <unique>J</unique>
+        <remark>K</remark>
+    </defaultFields>
+    <!--
+        数据结构定义中的sheet配置
+        name: sheet名称
+        script: 生成的脚本名称
+        row: 表示类型定义开始的行。与Excel的行数字一致即可。
+    -->
+    <sheet name="数据结构" script="01_数据结构.sql" row="3">
+        <table>
+            <name>C</name>
+            <comment>D</comment>
+        </table>
+        <field>
+            <name>E</name>
+            <comment>F</comment>
+            <type>G</type>
+            <precision>H</precision>
+            <default>I</default>
+            <primiaryKey>J</primiaryKey>
+            <autoIncrement>K</autoIncrement>
+            <nullable>L</nullable>
+            <unique>M</unique>
+            <remark>N</remark>
+        </field>
+
+        <skip-merge>WM_CANVAS_NODES,WM_CANVAS_LINES</skip-merge>
+    </sheet>
+
+    <sheet name="系统表" script="00_系统表.sql" row="3">
+        <table>
+            <name>C</name>
+            <comment>D</comment>
+        </table>
+        <field>
+            <name>E</name>
+            <comment>F</comment>
+            <type>G</type>
+            <precision>H</precision>
+            <default>I</default>
+            <primiaryKey>J</primiaryKey>
+            <autoIncrement>K</autoIncrement>
+            <nullable>L</nullable>
+            <unique>M</unique>
+            <remark>N</remark>
+        </field>
+        <skip-merge>SYS_ADMIN_LOG,SYS_ADMIN_LOGIN</skip-merge>
+    </sheet>
+</configuration>
